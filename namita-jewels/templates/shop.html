@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop - NAYEL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>NAYEL</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/about">About</a>
+        <a href="https://www.instagram.com/nayel__official" target="_blank">📸 Instagram</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<h1 style="text-align:center;">Our Collection</h1>
+
+<div class="products">
+    {% for product in products %}
+    <div class="card">
+        <img src="{{ url_for('static', filename=product.img) }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
+        <button onclick="orderNow('{{ product.name }}')">Order Now</button>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919148406241" class="whatsapp">💬</a>
+
+<footer>
+    © 2026 Namitha Enterprises. All rights reserved.<br><br>
+    📧 <a href="mailto:nayel.official.0005@gmail.com" style="color:gold;">
+    nayel.official.0005@gmail.com
+    </a>
+</footer>
+
+<script>
+function orderNow(product) {
+    let number = "919148406241";
+    let message = "Hi, I want to order " + product + " from NAYEL";
+    let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
