@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: black;
+    color: gold;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: gold;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+button {
+    background: gold;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Products */
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.card img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
